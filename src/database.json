@@ -1,0 +1,47 @@
+[
+    {
+      "# unit_id": 92,
+      "condo_id": 28,
+      "address": "7 Karlsburg Road",
+      "user_id": "30",
+      "max_cars": "2",
+      "car_id": "1",
+      "plate_number": "JBS5965",
+      "car_color": "silver",
+      "car_make": "NULL",
+      "car_model": "oddosy",
+      "car_pic": "?",
+      "unit_id": "NULL",
+      "last_updated": "02/24/2024"
+    },
+    {
+      "# unit_id": 93,
+      "condo_id": 28,
+      "address": "7 Karlsburg Rd",
+      "user_id": "31",
+      "max_cars": "2",
+      "car_id": "2",
+      "plate_number": "JBL7108",
+      "car_color": "brown",
+      "car_make": "NULL",
+      "car_model": "passport",
+      "car_pic": "NULL",
+      "unit_id": "?",
+      "last_updated": "01/16/2024"
+    },
+    {
+      "# unit_id": 94,
+      "condo_id": 28,
+      "address": "7 Karlsburg Rd",
+      "user_id": "32",
+      "max_cars": "2",
+      "car_id": "3",
+      "plate_number": "JBL7150",
+      "car_color": "blue",
+      "car_make": "NULL",
+      "car_model": "pilot",
+      "car_pic": "NULL",
+      "unit_id": "?",
+      "last_updated": "11/05/2023"
+    }
+  ]

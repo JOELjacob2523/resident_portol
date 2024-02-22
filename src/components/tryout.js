@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import data from "../database.json";
-import { Layout, Flex, Card, Typography } from "antd";
+import { Layout, Flex, Typography } from "antd";
 import EditButton from "./edit_btn";
 import "../App.css";
 
 const { Content, Footer, Header } = Layout;
 const { Paragraph } = Typography;
 
-const Tryout = () => {
+const Tryout = ({ handlePlateNumberChange }) => {
   const contentStyle = {
     textAlign: "center",
     minHeight: 120,
@@ -27,8 +27,9 @@ const Tryout = () => {
     justifyContent: "space-between",
     position: "sticky",
     top: 0,
-    backgroundColor: "#FBF0F0",
+    backgroundColor: "#0f1111",
     flexDirection: "row",
+    color: "aliceblue",
   };
 
   const [items, setItems] = useState([]);
@@ -38,7 +39,7 @@ const Tryout = () => {
     setItems(data);
   }, []);
 
-  const handlePlateNumberChange = (value) => {
+  handlePlateNumberChange = (value) => {
     setJson({
       ...json,
       plate_number: value,
@@ -60,8 +61,6 @@ const Tryout = () => {
             <Content style={contentStyle}>
               <h4
                 style={{
-                  height: "100px",
-                  paddingTop: "1%",
                   fontSize: "30px",
                   borderBottom: "white 5px solid",
                 }}
@@ -165,10 +164,35 @@ const Tryout = () => {
           position: "sticky",
           bottom: 0,
           textAlign: "center",
-          backgroundColor: "#FBF0F0",
+          backgroundColor: "#0f1111",
+          color: "aliceblue",
         }}
       >
-        SafetyHood ©2023 Created by SafetyHood
+        <div style={{ fontSize: "15px" }}>
+          We'd love to hear what you think!!
+        </div>
+        <button
+          style={{
+            borderRadius: "50px",
+            marginTop: "7px",
+            marginBottom: "10px",
+            height: "40px",
+            width: "10%",
+            border: "1px solid white",
+            cursor: "pointer",
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = "#0f1111";
+            e.currentTarget.style.color = "aliceblue";
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = "";
+            e.currentTarget.style.color = "";
+          }}
+        >
+          Give feedback
+        </button>
+        <div>SafetyHood ©2023 Created by SafetyHood</div>
       </Footer>
     </div>
   );

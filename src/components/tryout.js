@@ -19,7 +19,8 @@ const Tryout = ({ handlePlateNumberChange }) => {
     minHeight: "100vh",
     overflow: "hidden",
     width: "calc(50% - 8px)",
-    maxWidth: "calc(100% - 8px)",
+    maxWidth: "100%",
+    backgroundColor: "#E8E7E7",
   };
 
   const headerStyle = {
@@ -50,13 +51,13 @@ const Tryout = ({ handlePlateNumberChange }) => {
   };
 
   return (
-    <div className="app">
+    <div>
       <Header style={headerStyle}>
         <p>123456</p>
         <p>123456</p>
       </Header>
       <Flex gap="middle" wrap="wrap">
-        <Layout>
+        <Layout style={layoutStyle}>
           <div>
             <Content style={contentStyle}>
               <h4
@@ -156,11 +157,45 @@ const Tryout = ({ handlePlateNumberChange }) => {
               </div>
             </Content>
           </div>
+
+          <div
+            style={{
+              fontSize: "15px",
+              textAlign: "center",
+              backgroundColor: "#0f1111",
+              color: "aliceblue",
+              paddingTop: "15px",
+            }}
+          >
+            We'd love to hear what you think!!
+            <div>
+              <button
+                style={{
+                  borderRadius: "50px",
+                  marginTop: "7px",
+                  marginBottom: "10px",
+                  height: "40px",
+                  width: "10%",
+                  border: "1px solid white",
+                  cursor: "pointer",
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.backgroundColor = "#0f1111";
+                  e.currentTarget.style.color = "aliceblue";
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.backgroundColor = "";
+                  e.currentTarget.style.color = "";
+                }}
+              >
+                Give feedback
+              </button>
+            </div>
+          </div>
         </Layout>
       </Flex>
       <Footer
         style={{
-          marginTop: "auto",
           position: "sticky",
           bottom: 0,
           textAlign: "center",
@@ -168,30 +203,6 @@ const Tryout = ({ handlePlateNumberChange }) => {
           color: "aliceblue",
         }}
       >
-        <div style={{ fontSize: "15px" }}>
-          We'd love to hear what you think!!
-        </div>
-        <button
-          style={{
-            borderRadius: "50px",
-            marginTop: "7px",
-            marginBottom: "10px",
-            height: "40px",
-            width: "10%",
-            border: "1px solid white",
-            cursor: "pointer",
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = "#0f1111";
-            e.currentTarget.style.color = "aliceblue";
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = "";
-            e.currentTarget.style.color = "";
-          }}
-        >
-          Give feedback
-        </button>
         <div>SafetyHood ©2023 Created by SafetyHood</div>
       </Footer>
     </div>

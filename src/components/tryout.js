@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import data from "../database.json";
 import DropdownBtn from "./dropdown_btn";
 import { Layout, Flex, Typography } from "antd";
-import EditButton from "./edit_btn";
 import "../App.css";
 
 const { Content, Footer, Header } = Layout;
 const { Paragraph } = Typography;
 
-const Tryout = ({ handlePlateNumberChange }) => {
+const Tryout = () => {
   const contentStyle = {
     textAlign: "center",
     minHeight: 120,
@@ -31,24 +30,14 @@ const Tryout = ({ handlePlateNumberChange }) => {
     backgroundColor: "#0f1111",
     flexDirection: "row",
     color: "aliceblue",
-    zIndex: "100",
+    zIndex: 100,
   };
 
   const [items, setItems] = useState([]);
-  const [json, setJson] = useState({ data });
 
   useEffect(() => {
     setItems(data);
   }, []);
-
-  handlePlateNumberChange = (value) => {
-    setJson({
-      ...json,
-      plate_number: value,
-    });
-    // Handle the change of Plate Number value if needed
-    console.log("Plate Number changed:", value);
-  };
 
   return (
     <div>
@@ -78,9 +67,6 @@ const Tryout = ({ handlePlateNumberChange }) => {
                         alignItems: "center",
                       }}
                     >
-                      <EditButton
-                        onPlateNumberChange={handlePlateNumberChange}
-                      />
                       <div
                         style={{
                           filter: "drop-shadow(8px 8px 8px gray)",
@@ -91,27 +77,28 @@ const Tryout = ({ handlePlateNumberChange }) => {
                           margin: "20px",
                           padding: "10px",
                           borderRadius: "3px",
-                          width: "30%",
-                          zIndex: "1",
+                          width: "90%",
+                          zIndex: 1,
+                          lineHeight: "2",
                         }}
                       >
+                        <p>
+                          <strong>Condo ID:</strong> {item.condo_id}
+                        </p>
                         <div
                           style={{
-                            padding: "10px",
+                            display: "flex",
+                            flexDirection: "row",
+                            justifyContent: "space-between",
+                            padding: "15px",
                           }}
                         >
-                          <p>
-                            <strong>Condo ID:</strong> {item.condo_id}
-                          </p>
                           <p>
                             <strong>Address:</strong> {item.address}
                           </p>
                           <p>
                             <strong>City/State/Zip:</strong> {item.city}{" "}
                             {item.state} {item.zip_code}
-                          </p>
-                          <p>
-                            <strong>Max Cars:</strong> {item.max_cars}
                           </p>
                           <p>
                             <strong>Last Updated:</strong> {item.last_updated}
@@ -135,7 +122,7 @@ const Tryout = ({ handlePlateNumberChange }) => {
                           color: "whitesmoke",
                         }}
                       >
-                        <div>
+                        {/*<div>
                           <Paragraph
                             editable={{
                               onChange: handlePlateNumberChange,
@@ -146,57 +133,7 @@ const Tryout = ({ handlePlateNumberChange }) => {
                             </strong>{" "}
                             {item.plate_number}
                           </Paragraph>
-                        </div>
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          background: "#474a4a",
-                          color: "whitesmoke",
-                        }}
-                      >
-                        car 2
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          background: "#474a4a",
-                          color: "whitesmoke",
-                        }}
-                      >
-                        car 3
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          background: "#474a4a",
-                          color: "whitesmoke",
-                        }}
-                      >
-                        car 4
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          background: "#474a4a",
-                          color: "whitesmoke",
-                        }}
-                      >
-                        car 5
-                      </div>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          background: "#474a4a",
-                          color: "whitesmoke",
-                        }}
-                      >
-                        car 6
+                          </div>*/}
                       </div>
                     </div>
                   </div>
@@ -249,7 +186,7 @@ const Tryout = ({ handlePlateNumberChange }) => {
           textAlign: "center",
           backgroundColor: "#0f1111",
           color: "aliceblue",
-          zIndex: "100",
+          zIndex: 100,
         }}
       >
         <div>SafetyHood ©2023 Created by SafetyHood</div>

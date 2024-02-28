@@ -119,7 +119,7 @@ const Tryout = ({ handlePlateNumberChange }) => {
                         </div>
                         <div
                           style={{
-                            alignSelf: "flex-end",
+                            float: "inline-end",
                           }}
                         >
                           <DropdownBtn />

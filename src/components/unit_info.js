@@ -12,6 +12,12 @@ const UnitInfo = () => {
     <div
       style={{
         display: "flex",
+        justifyContent: "space-between",
+        flexDirection: "row",
+        width: "100%",
+        border: "2px solid #E8E1E1",
+        padding: "10px",
+        borderRadius: "3px",
       }}
     >
       {info.map((item, index) => (

@@ -13,6 +13,7 @@ const UnitInfo = () => {
     <div
       style={{
         width: "100%",
+        padding: "15px",
       }}
     >
       <div>
@@ -22,9 +23,9 @@ const UnitInfo = () => {
               className="text-center"
               key={index}
               style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
+                display: "grid",
+                gridTemplate: "repeat(4, 1fr) / repeat(2, 1fr)",
+                gridAutoFlow: "row dense",
                 border: "2px solid #E8E1E1",
                 padding: "10px",
                 margin: "10px",
@@ -34,7 +35,7 @@ const UnitInfo = () => {
               <p>
                 <strong>Unit ID:</strong> {item.user_id}
               </p>
-              <p style={{ textAlign: "center" }}>
+              <p>
                 <strong>Number of Cars:</strong> {item.max_cars}
                 <br /> <small>( max cars 2 )</small>
               </p>
@@ -45,11 +46,7 @@ const UnitInfo = () => {
                 <strong>City/State/Zip:</strong> {item.city} {item.state}{" "}
                 {item.zip_code}
               </p>
-              <div
-                style={{
-                  marginTop: "10px",
-                }}
-              >
+              <div>
                 <EditUser />
               </div>
             </div>

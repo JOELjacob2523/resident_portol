@@ -13,6 +13,7 @@ const CarInfo = () => {
     <div
       style={{
         width: "100%",
+        padding: "15px",
       }}
     >
       {info.map((item, index) => (
@@ -20,9 +21,9 @@ const CarInfo = () => {
           className="text-center"
           key={index}
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            flexDirection: "column",
+            display: "grid",
+            gridTemplate: "repeat(4, 1fr) / repeat(2, 1fr)",
+            gridAutoFlow: "row dense",
             border: "2px solid #E8E1E1",
             padding: "25px",
             margin: "10px",
@@ -44,11 +45,7 @@ const CarInfo = () => {
           <p>
             <strong>Car image:</strong> {item.car_pic}
           </p>
-          <div
-            style={{
-              marginTop: "10px",
-            }}
-          >
+          <div>
             <EditUser />
           </div>
         </div>

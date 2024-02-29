@@ -12,18 +12,18 @@ const UnitHome = () => {
     <div
       style={{
         width: "100%",
-        border: "2px solid #E8E1E1",
-        padding: "25px",
-        borderRadius: "3px",
+        padding: "15px",
       }}
     >
       {home.map((item, index) => (
         <div
+          className="text-center"
           key={index}
           style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
+            display: "grid",
+            gap: "10px",
+            gridTemplate: "repeat(4, 1fr) / repeat(2, 1fr)",
+            gridAutoFlow: "row dense",
             border: "2px solid #E8E1E1",
             padding: "10px",
             margin: "10px",

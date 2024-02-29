@@ -48,11 +48,7 @@ const EditUser = () => {
           </div>
         </div>
       </ReactModal>
-      <Button
-        variant="outline-primary"
-        style={{ width: "10%" }}
-        onClick={toggleModal}
-      >
+      <Button variant="outline-primary" onClick={toggleModal}>
         <FontAwesomeIcon icon={faPencilSquare} /> Edit
       </Button>
     </div>

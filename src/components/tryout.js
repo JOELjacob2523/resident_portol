@@ -13,7 +13,7 @@ const Tryout = () => {
     justifyContent: "space-between",
     position: "sticky",
     top: 0,
-    backgroundColor: "#0f1111",
+    backgroundColor: "blue",
     flexDirection: "row",
     color: "aliceblue",
     zIndex: 100,
@@ -143,12 +143,12 @@ const Tryout = () => {
           position: "sticky",
           bottom: 0,
           textAlign: "center",
-          backgroundColor: "#0f1111",
+          backgroundColor: "blue",
           color: "aliceblue",
           zIndex: 100,
         }}
       >
-        <div>SafetyHood ©2023 Created by SafetyHood</div>
+        <div>SafetyHood ©{new Date().getFullYear()} Created by SafetyHood</div>
       </Footer>
     </div>
   );

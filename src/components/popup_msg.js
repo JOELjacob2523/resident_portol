@@ -1,7 +1,9 @@
 import ReactModal from "react-modal";
 import { useState } from "react";
-import { Button } from "antd";
-import { EditTwoTone } from "@ant-design/icons";
+import EditForm from "./edit_form";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPencilSquare } from "@fortawesome/free-solid-svg-icons";
+import { Button } from "react-bootstrap";
 
 const EditUser = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -19,11 +21,11 @@ const EditUser = () => {
         contentLabel="Example Modal"
         style={{
           overlay: {
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            backgroundColor: "transparent",
             zIndex: 1000,
           },
           content: {
-            maxWidth: "400px",
+            maxWidth: "50%",
             margin: "auto",
             marginTop: "15%",
             padding: "20px",
@@ -33,11 +35,25 @@ const EditUser = () => {
           },
         }}
       >
-        <h1>This is a pop-up message!</h1>
+        <div>
+          <h1
+            style={{
+              textAlign: "center",
+            }}
+          >
+            Edit Form
+          </h1>
+          <div>
+            <EditForm />
+          </div>
+        </div>
       </ReactModal>
-      <Button type="link" onClick={toggleModal}>
-        <EditTwoTone />
-        Edit
+      <Button
+        variant="outline-primary"
+        style={{ width: "10%" }}
+        onClick={toggleModal}
+      >
+        <FontAwesomeIcon icon={faPencilSquare} /> Edit
       </Button>
     </div>
   );

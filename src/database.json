@@ -1,6 +1,7 @@
 [
     {
       "# unit_id": 92,
+      "name": "Joel Jacob",
       "condo_id": 28,
       "address": "7 Karlsburg Road #102",
       "city" : "Monroe",
@@ -19,6 +20,7 @@
     },
     {
       "# unit_id": 93,
+      "name": "Moshe Jacob",
       "condo_id": 28,
       "address": "7 Karlsburg Rd #102",
       "city" : "Monroe",
@@ -37,6 +39,7 @@
     },
     {
       "# unit_id": 94,
+      "name": "Shmiel Jacob",
       "condo_id": 28,
       "address": "7 Karlsburg Rd #102",
       "city" : "Monroe",

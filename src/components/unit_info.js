@@ -13,43 +13,48 @@ const UnitInfo = () => {
     <div
       style={{
         width: "100%",
-        border: "2px solid #E8E1E1",
-        padding: "25px",
-        borderRadius: "3px",
       }}
     >
-      {info.map((item, index) => (
-        <div
-          key={index}
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-          }}
-        >
-          <p>
-            <strong>Unit ID:</strong> {item.user_id}
-          </p>
-          <p>
-            <strong>Number of Cars:</strong> {item.max_cars}
-            <br /> <small>( max cars 2 )</small>
-          </p>
-          <p>
-            <strong>Address:</strong> {item.address}
-          </p>
-          <p>
-            <strong>City/State/Zip:</strong> {item.city} {item.state}{" "}
-            {item.zip_code}
-          </p>
-        </div>
-      ))}
-      <div
-        style={{
-          float: "right",
-          marginTop: "10px",
-        }}
-      >
-        <EditUser />
+      <div>
+        {info.map((item, index) => (
+          <>
+            <div
+              className="text-center"
+              key={index}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                border: "2px solid #E8E1E1",
+                padding: "10px",
+                margin: "10px",
+                borderRadius: "3px",
+              }}
+            >
+              <p>
+                <strong>Unit ID:</strong> {item.user_id}
+              </p>
+              <p style={{ textAlign: "center" }}>
+                <strong>Number of Cars:</strong> {item.max_cars}
+                <br /> <small>( max cars 2 )</small>
+              </p>
+              <p>
+                <strong>Address:</strong> {item.address}
+              </p>
+              <p>
+                <strong>City/State/Zip:</strong> {item.city} {item.state}{" "}
+                {item.zip_code}
+              </p>
+              <div
+                style={{
+                  marginTop: "10px",
+                }}
+              >
+                <EditUser />
+              </div>
+            </div>
+          </>
+        ))}
       </div>
     </div>
   );

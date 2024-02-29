@@ -13,18 +13,20 @@ const CarInfo = () => {
     <div
       style={{
         width: "100%",
-        border: "2px solid #E8E1E1",
-        padding: "25px",
-        borderRadius: "3px",
       }}
     >
       {info.map((item, index) => (
         <div
+          className="text-center"
           key={index}
           style={{
             display: "flex",
             justifyContent: "space-between",
-            flexDirection: "row",
+            flexDirection: "column",
+            border: "2px solid #E8E1E1",
+            padding: "25px",
+            margin: "10px",
+            borderRadius: "3px",
           }}
         >
           <p>
@@ -42,16 +44,15 @@ const CarInfo = () => {
           <p>
             <strong>Car image:</strong> {item.car_pic}
           </p>
+          <div
+            style={{
+              marginTop: "10px",
+            }}
+          >
+            <EditUser />
+          </div>
         </div>
       ))}
-      <div
-        style={{
-          float: "right",
-          marginTop: "10px",
-        }}
-      >
-        <EditUser />
-      </div>
     </div>
   );
 };

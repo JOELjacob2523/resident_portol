@@ -3,6 +3,7 @@ import data from "../database.json";
 import DropdownBtn from "./dropdown_btn";
 import { Layout } from "antd";
 import Card from "react-bootstrap/Card";
+import SidebarInfo from "./sidebar_info";
 import "../App.css";
 
 const { Footer, Header } = Layout;
@@ -31,12 +32,14 @@ const Tryout = () => {
         <p>123456</p>
         <p>123456</p>
       </Header>
+
       <Card
         style={{
           width: "60%",
           margin: "auto",
           marginTop: "10px",
           marginBottom: "10px",
+          filter: "drop-shadow(8px 8px 8px gray)",
         }}
       >
         <div>
@@ -64,7 +67,7 @@ const Tryout = () => {
                   >
                     <div
                       style={{
-                        filter: "drop-shadow(8px 8px 8px gray)",
+                        filter: "drop-shadow(5px -5px 20px #E0E0E0)",
                         backgroundColor: "#FBFAFA",
                         display: "flex",
                         flexDirection: "column",
@@ -148,7 +151,9 @@ const Tryout = () => {
           zIndex: 100,
         }}
       >
-        <div>SafetyHood ©{new Date().getFullYear()} Created by SafetyHood</div>
+        <div>
+          SafetyHood &copy;{new Date().getFullYear()} Created by SafetyHood
+        </div>
       </Footer>
     </div>
   );

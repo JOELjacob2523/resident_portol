@@ -1,0 +1,35 @@
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    background-color: brown;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    margin-left: 0 !important;
+}
+
+.logo-inner{
+    width: 300px;
+    height: auto;
+}
+
+.side-bar-menu {
+    flex-grow: 1;
+}
+
+.side-bar-footer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    min-height: 50px;
+    bottom: 0;
+    background-color: #FBCE97;
+    text-align: center;
+}

@@ -1,7 +1,12 @@
+import { Avatar, Card, Col, Row } from "antd";
 import data from "../database.json";
 import React, { useState, useEffect } from "react";
-import EditUser from "./popup_msg";
-
+import Meta from "antd/es/card/Meta";
+import {
+  EditOutlined,
+  EllipsisOutlined,
+  SettingOutlined,
+} from "@ant-design/icons";
 const CarInfo = () => {
   const [info, setInfo] = useState([]);
 
@@ -16,40 +21,38 @@ const CarInfo = () => {
         padding: "15px",
       }}
     >
-      {info.map((item, index) => (
-        <div
-          className="text-center"
-          key={index}
-          style={{
-            display: "grid",
-            gridTemplate: "repeat(4, 1fr) / repeat(2, 1fr)",
-            gridAutoFlow: "row dense",
-            border: "2px solid #E8E1E1",
-            padding: "25px",
-            margin: "10px",
-            borderRadius: "3px",
-          }}
-        >
-          <p>
-            <strong>Plate number:</strong> {item.plate_number}
-          </p>
-          <p>
-            <strong>Car color:</strong> {item.car_color}
-          </p>
-          <p>
-            <strong>Car make:</strong> {item.car_make}
-          </p>
-          <p>
-            <strong>Car model:</strong> {item.car_model}
-          </p>
-          <p>
-            <strong>Car image:</strong> {item.car_pic}
-          </p>
-          <div>
-            <EditUser />
-          </div>
-        </div>
-      ))}
+      {/* {info.map((item, index) => ( */}
+      <Row gutter={16}>
+        <Col span={16}>
+          <Card
+            title={`Car #${1}`}
+            bordered={false}
+            style={{
+              width: 300,
+            }}
+            cover={
+              <img
+                alt="example"
+                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+              />
+            }
+            actions={[
+              <SettingOutlined key="setting" />,
+              <EditOutlined key="edit" />,
+              <EllipsisOutlined key="ellipsis" />,
+            ]}
+          >
+            <Meta
+              avatar={
+                <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />
+              }
+              title="Card title"
+              description="This is the description"
+            />
+          </Card>
+        </Col>
+      </Row>
+      {/* ))} */}
     </div>
   );
 };

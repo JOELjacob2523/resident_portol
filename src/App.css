@@ -12,29 +12,26 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  background-color: black;
+  background-color: rgb(123, 118, 118);
   color: white;
   height: 75px;
 }
 
 .side-bar{
   min-width: 300px;
-  background-color: lightblue;
   display: flex;
   flex-direction: column;
 }
 
 .app-body-container{
   flex-grow: 1;
+  background-color: lightblue;
 }
 
 .app-body{
-  background-color: aquamarine;
   display: flex;
   flex-grow: 1;
 }
-
-
 
 .app-footer {
   background-color: orange;

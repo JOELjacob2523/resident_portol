@@ -19,9 +19,7 @@ function App() {
         <div className="app-body">
           <CarPage />
         </div>
-        <div className="app-footer">
-          SafetyHood &copy;{new Date().getFullYear()} Created by SafetyHood
-        </div>
+        <div className="app-footer"></div>
       </div>
     </div>
   );

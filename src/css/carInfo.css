@@ -1,0 +1,38 @@
+.car-info-container{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.inner-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.top-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    width: 98%;
+    text-align: center;
+  }
+
+.info-card-container{
+    padding: 15px;
+    margin-top: 50px;
+}
+
+.btn-container{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-btn{
+    width: 100%;
+    height: 100px;
+    font-size: xx-large;
+}

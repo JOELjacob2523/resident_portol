@@ -18,16 +18,6 @@ export const items = [
     key: 2,
     label: `Apartments`,
     icon: <MdOutlineApartment />,
-    children: [
-      {
-        key: "apt-child1",
-        label: `Apartment 1`,
-      },
-      {
-        key: "apt-child2",
-        label: `Apartment 2`,
-      },
-    ],
   },
   {
     key: 3,

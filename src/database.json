@@ -36,24 +36,5 @@
       "car_pic": "NULL",
       "unit_id": "?",
       "last_updated": "01/16/2024"
-    },
-    {
-      "# unit_id": 94,
-      "name": "Shmiel Jacob",
-      "condo_id": 28,
-      "address": "7 Karlsburg Rd #102",
-      "city" : "Monroe",
-      "state": "NY",
-      "zip_code": 10950,
-      "user_id": "32",
-      "max_cars": "2",
-      "car_id": "3",
-      "plate_number": "JBL7150",
-      "car_color": "blue",
-      "car_make": "NULL",
-      "car_model": "pilot",
-      "car_pic": "NULL",
-      "unit_id": "?",
-      "last_updated": "11/05/2023"
     }
   ]

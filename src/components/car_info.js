@@ -7,7 +7,7 @@ import {
   EllipsisOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
-import { FiMapPin, FiPlusSquare } from "react-icons/fi";
+import { FiMapPin, FiPlusCircle } from "react-icons/fi";
 import carImage from "../images/exterior-640-en_US.webp";
 import carIcon from "../images/car_icon.png";
 import "../css/carInfo.css";
@@ -56,7 +56,17 @@ const CarInfo = () => {
                       <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />
                     }
                     title={`Car #${index + 1}`}
-                    description={`Plate Number: ${item.plate_number}`}
+                    description={
+                      <div>
+                        {`Plate Number: ${item.plate_number}`}
+                        <br key={`${index}-br`} />{" "}
+                        {`Car color: ${item.car_color}`}
+                        <br key={`${index}-br`} />{" "}
+                        {`Car make: ${item.car_make}`}
+                        <br key={`${index}-br`} />{" "}
+                        {`Car model: ${item.car_model}`}
+                      </div>
+                    }
                   />
                 </Card>
               </Col>
@@ -69,16 +79,16 @@ const CarInfo = () => {
         <Row gutter={16}>
           <Col span={16} style={{ padding: "5px" }}>
             <Card
-              title="Add new car"
+              title="Add New Car"
               bordered={false}
               style={{
                 width: 300,
-                height: 425,
+                height: 485,
               }}
               cover={<img alt="example" src={carIcon} />}
             >
               <Button className="add-btn">
-                <FiPlusSquare />
+                <FiPlusCircle />
               </Button>
             </Card>
           </Col>

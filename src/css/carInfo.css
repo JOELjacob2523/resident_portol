@@ -22,13 +22,16 @@
 .info-card-container{
     padding: 15px;
     margin-top: 50px;
+    background-color: rgb(235, 233, 233);
 }
 
 .btn-container{
     margin-top: 50px;
+    padding: 15px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
+    background-color: rgb(235, 233, 233);
 }
 
 .add-btn{

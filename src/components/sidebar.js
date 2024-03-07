@@ -9,7 +9,7 @@ const Sidebar = () => {
   } = theme.useToken();
 
   return (
-    <div>
+    <div className="container">
       <div className="logo-container">
         <div className="logo-inner">
           <img

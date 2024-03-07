@@ -9,6 +9,7 @@ import {
 } from "@ant-design/icons";
 import { FiMapPin, FiPlusSquare } from "react-icons/fi";
 import carImage from "../images/exterior-640-en_US.webp";
+import carIcon from "../images/car_icon.png";
 import "../css/carInfo.css";
 
 const CarInfo = () => {
@@ -36,7 +37,7 @@ const CarInfo = () => {
         {info.map((item, index) => (
           <div key={index} className="info-card-container">
             <Row gutter={16}>
-              <Col span={16}>
+              <Col span={16} style={{ padding: "5px" }}>
                 <Card
                   title={`Car #${1}`}
                   bordered={false}
@@ -66,14 +67,15 @@ const CarInfo = () => {
 
       <div className="btn-container">
         <Row gutter={16}>
-          <Col span={16}>
+          <Col span={16} style={{ padding: "5px" }}>
             <Card
               title="Add new car"
               bordered={false}
               style={{
                 width: 300,
+                height: 425,
               }}
-              cover={<img alt="example" src={carImage} />}
+              cover={<img alt="example" src={carIcon} />}
             >
               <Button className="add-btn">
                 <FiPlusSquare />

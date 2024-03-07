@@ -12,7 +12,7 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  background-color: rgb(123, 118, 118);
+  background-color: rgb(142, 139, 139);
   color: white;
   height: 75px;
 }
@@ -25,7 +25,6 @@
 
 .app-body-container{
   flex-grow: 1;
-  background-color: lightblue;
 }
 
 .app-body{

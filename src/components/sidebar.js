@@ -19,24 +19,26 @@ const Sidebar = () => {
           />
         </div>
       </div>
-      <Sider
-        className="side-bar-menu"
-        width={300}
-        style={{
-          background: colorBgContainer,
-        }}
-      >
-        <Menu
-          mode="inline"
-          defaultSelectedKeys={["1"]}
-          defaultOpenKeys={["sub1"]}
+      <div className="side-bar-container">
+        <Sider
+          className="side-bar-menu"
+          width={300}
           style={{
-            height: "100%",
-            borderRight: 0,
+            background: colorBgContainer,
           }}
-          items={items}
-        />
-      </Sider>
+        >
+          <Menu
+            mode="inline"
+            defaultSelectedKeys={["1"]}
+            defaultOpenKeys={["sub1"]}
+            style={{
+              height: "100%",
+              borderRight: 0,
+            }}
+            items={items}
+          />
+        </Sider>
+      </div>
       <div className="side-bar-footer">
         SafetyHood &copy;{new Date().getFullYear()} <br /> Created by SafetyHood
       </div>

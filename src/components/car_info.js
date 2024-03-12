@@ -1,4 +1,4 @@
-import { Avatar, Button, Card, Col, Row } from "antd";
+import { Avatar, Button, Card, Col, Row, Image } from "antd";
 import data from "../database.json";
 import React, { useState, useEffect } from "react";
 import Meta from "antd/es/card/Meta";
@@ -35,6 +35,7 @@ const CarInfo = () => {
                     width: 300,
                   }}
                   cover={<img alt="example" src={carImage} />}
+                  //cover={<Image src={carImage} />}
                   actions={[
                     <SettingOutlined key="setting" />,
                     <EditOutlined key="edit" />,

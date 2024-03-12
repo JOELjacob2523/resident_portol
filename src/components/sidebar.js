@@ -5,7 +5,7 @@ const { Sider } = Layout;
 
 const Sidebar = () => {
   const {
-    token: { colorBgContainer, borderRadiusLG },
+    token: { colorBgContainer },
   } = theme.useToken();
 
   return (
@@ -21,13 +21,13 @@ const Sidebar = () => {
       </div>
       <div className="side-bar-container">
         <Sider
-          className="side-bar-menu"
           width={300}
           style={{
             background: colorBgContainer,
           }}
         >
           <Menu
+            className="side-bar-menu"
             mode="inline"
             defaultSelectedKeys={["1"]}
             defaultOpenKeys={["sub1"]}
@@ -40,7 +40,8 @@ const Sidebar = () => {
         </Sider>
       </div>
       <div className="side-bar-footer">
-        SafetyHood &copy;{new Date().getFullYear()} <br /> Created by SafetyHood
+        SafetyHood &copy;{new Date().getFullYear()} <br /> Created by SafetyHood{" "}
+        <br /> All rights reserved
       </div>
     </div>
   );

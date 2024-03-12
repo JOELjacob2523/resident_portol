@@ -1,5 +1,6 @@
 import { Tabs } from "antd";
 import CarInfo from "./car_info";
+import UnitInfo from "./unitInfo";
 
 const items = [
   {
@@ -10,7 +11,7 @@ const items = [
   {
     label: `Apt #${2}`,
     key: 2,
-    children: `Content of Tab Pane ${2}`,
+    children: <UnitInfo />,
   },
   {
     label: `Apt #${3}`,

@@ -1,9 +1,7 @@
-.container{
-    background-color: rgb(252, 254, 254);
+.container {
     filter: drop-shadow(3px 3px 3px gray);
-    max-height: 902px;
-    position: sticky;
-    top: 0;
+    background-color: rgb(249, 248, 248);
+    height: auto;
 }
 
 .logo-container{
@@ -11,7 +9,10 @@
     justify-content: center;
     align-items: center;
     height: 75px;
-    background-color: brown;
+    background-color: rgb(156, 153, 153);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 img{
@@ -26,13 +27,12 @@ img{
 }
 
 .side-bar-container{
-    position: relative;
-    top: 20px;
+    position: sticky;
+    margin-top: 20px;
 }
 
-.side-bar-menu {
-    flex-grow: 1;
-    background-color: red;
+.side-bar-menu{
+  background-color: rgb(249, 248, 248);
 }
 
 .side-bar-footer {
@@ -40,9 +40,10 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    min-height: 50px;
+    width: 100%;
+    min-height: 60px;
     bottom: 0;
-    background-color: #FBCE97;
+    background-color:  rgb(156, 153, 153);
     text-align: center;
+    font-size: small;
 }

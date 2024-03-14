@@ -41,7 +41,7 @@ const Sidebar = () => {
       </div>
       <div className="side-bar-footer">
         SafetyHood &copy;{new Date().getFullYear()} <br /> Created by SafetyHood{" "}
-        <br /> All rights reserved
+        <br /> All Rights Reserved
       </div>
     </div>
   );

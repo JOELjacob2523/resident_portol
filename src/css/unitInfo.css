@@ -1,7 +1,23 @@
 .unit-info-container{
-    padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
-.description-tag{
-    margin: 15px;
+.unit-info-inner{
+  padding: 20px;
+  padding-top: 75px;
+  width: 100%;
 }
+
+/* .unit-info-row{
+    width: 100%;
+} */
+
+.unit-info-col{
+    width: 100%;
+}
+
+/* .unit-info-card{
+  background-color: rgb(242, 242, 242);
+}  */

@@ -7,19 +7,19 @@ import {
 import { TfiAnnouncement } from "react-icons/tfi";
 import { RiContactsLine, RiGitPullRequestLine } from "react-icons/ri";
 import { CgDanger, CgFileDocument } from "react-icons/cg";
-import CarPage from "../components/carPage";
 
 export const items = [
   {
     key: 1,
     label: `Home`,
     icon: <HomeOutlined />,
-    path: <CarPage />,
+    path: "/car-page",
   },
   {
     key: 2,
     label: `Apartments`,
     icon: <MdOutlineApartment />,
+    path: "/apartments",
   },
   {
     key: 3,

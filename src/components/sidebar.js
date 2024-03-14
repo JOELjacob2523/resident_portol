@@ -1,6 +1,7 @@
 import { Layout, Menu, theme } from "antd";
 import React from "react";
 import { items } from "../data/sideBarItems";
+import { Link } from "react-router-dom";
 const { Sider } = Layout;
 
 const Sidebar = () => {
@@ -26,6 +27,17 @@ const Sidebar = () => {
             background: colorBgContainer,
           }}
         >
+          {/* <Menu
+            className="side-bar-menu"
+            mode="inline"
+            defaultSelectedKeys={["1"]}
+            defaultOpenKeys={["sub1"]}
+            style={{
+              height: "100%",
+              borderRight: 0,
+            }}
+            items={items}
+          /> */}
           <Menu
             className="side-bar-menu"
             mode="inline"
@@ -36,7 +48,15 @@ const Sidebar = () => {
               borderRight: 0,
             }}
             items={items}
-          />
+          >
+            {/* Map through items and render menu items */}
+            {items.map((item) => (
+              <Menu.Item key={item.key}>
+                {/* Use Link component to create navigation links */}
+                <Link to={item.path}>{item.label}</Link>
+              </Menu.Item>
+            ))}
+          </Menu>
         </Sider>
       </div>
       <div className="side-bar-footer">

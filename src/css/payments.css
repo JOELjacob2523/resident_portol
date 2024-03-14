@@ -1,0 +1,43 @@
+.payments-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.payments-table{
+    width: 70%;
+    padding: 0 25px 0 25px;
+}
+
+.make-payment-container{
+    width: 20%;
+    background-color: rgb(247, 247, 247);
+    padding: 25px;
+    max-height: 200px;
+    text-align: center;
+    filter: drop-shadow(3px 3px 3px gray);
+    border-radius: 5px;
+    font-size: large;
+}
+
+.current-balance{
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.make-payment-inner{
+    padding: 15px;
+    font-size: large;
+}
+
+.make-payment-btn{
+    font-size: medium;
+}
+
+.autopay-container{
+    padding: 15px;
+}
+
+.autopay-btn{
+    font-size: medium;
+}

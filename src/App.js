@@ -4,6 +4,8 @@ import "./css/carPage.css";
 import HeadPopover from "./components/HeadPopover";
 import Sidebar from "./components/sidebar";
 import CarPage from "./components/carPage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import UnitInfo from "./components/unitInfo";
 
 function App() {
   return (
@@ -17,7 +19,12 @@ function App() {
           <HeadPopover />
         </div>
         <div className="app-body">
-          <CarPage />
+          <Router>
+            <Routes>
+              <Route path="/car-page" element={<CarPage />} />
+              <Route path="/apartments" element={<UnitInfo />} />
+            </Routes>
+          </Router>
         </div>
         <div className="app-footer"></div>
       </div>

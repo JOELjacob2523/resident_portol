@@ -17,7 +17,7 @@ const HeadPopover = () => {
     <div className="app-head-popover-div">
       <List size="small">
         <List.Item>
-          <List.Item.Meta avatar={<UserOutlined />} title="Profile" />
+          <List.Item.Meta avatar={<UserOutlined />} title="My Profile" />
         </List.Item>
         <List.Item>
           <List.Item.Meta avatar={<SettingOutlined />} title="Settings" />
